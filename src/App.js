@@ -5,7 +5,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faEnvelopesBulk, faPhoneSquare } from '@fortawesome/free-solid-svg-icons'
 
 import './App.css';
 
@@ -118,27 +119,78 @@ function App() {
     </div>
     <div className="d-flex mt-1">
       <div className="col-3 mediaWrapper">
-        <ul>
+        <ul className="d-flex">
           <li>
-          <svg class="svg-inline--fa fa-facebook-f" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
-          </li>
+          <FontAwesomeIcon icon={faEnvelopesBulk} />
+         </li>
+         <li>
+          <FontAwesomeIcon icon={faPhoneSquare} />
+         </li>
         </ul>
       </div>
       <p className="col-9 quates">If you are concerned about your environmental footprint and want a more
-         <br/> eco friendly option then <span>Bio Diesel</span> is an excellent option for you</p>
+         <br/> eco friendly option then we are here with <span>Bio Diesel</span> which is an excellent option for you</p>
     </div>
      <h3>About Us</h3>
      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
      <div className="col-12 overflow-hidden videoWrapper">
-     <p>Let us enhanse the energy security for India by creating <br/>
-     <span>A Biofuel economy</span> 
+     <p>Join with us <br/> Let us enhanse the energy security for India by creating <br/>
+     <span>A Biofuel economy</span><br/><br/>
+     <a class="button" href="#contact">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Contact Us
+      </a>
      </p>
      <video autoplay="autoplay" muted loop id="myVideo">
         <source src="biodeisel.mp4" type="video/mp4" />
       </video>
      
      </div>
-     
+     <div>
+      <div className="missionWrapper">
+        <div><img src="diesel1.jpg" alt="diesel" />
+        <div>
+          <h4>Biodiesel Overview?</h4>
+          <p>
+          Biodiesel is a form of renewable and biodegradable diesel fuel derived from plants, animals or recycled restaurant grease.
+          It is a cleaner-burning replacement for petroleum-based diesel fuel. Our biodiesel team is focused on providing quality fuel solution that intelligently address the growing demand for bio based environment friently diesel.
+          <h5>Biodiesel Production Process</h5>
+          This is the process of producing the biodiesel, through the chemical reactions of transesterification and esterification. This involves vegetable or animal fats and oils being reacted with short-chain alcohols. 
+          
+          </p>
+        </div>
+        </div>
+        </div>
+        <div className="vissionWrapper">
+          <div className="d-flex">
+            <div className="rightPading">
+          <div>
+            <h4>Biodiesel Advantages</h4>
+          <ul>
+            <li>Easy to use</li>
+            <li>Superior Lubricity</li>
+            <li>Better Engine Performance</li>
+            <li>Longer Engine life</li>
+            <li>Increases energy security, improves air quality and the environment</li>
+          </ul>
+          </div>
+          <img src="diesel3.jpg" alt="diesel" />
+            </div>
+            <div>
+              <div>
+              <h4>Blending Ratio of Biodiesel</h4>
+              <p>Biodiesel can be used in any diesel engine and can be mixed with petroleum diesel in any blend including pure biodiesel (B100).
+                The most commonly used blend B20 is a higher-level blend containing up to 20 percent of bio diesel. 
+              </p>
+              </div>
+              <img src="category.jpg" alt="diesel" />
+            </div>
+          </div> 
+      </div>
+     </div>
      
       <form ref={form} onSubmit={sendMail}>
           <label>Name</label>
