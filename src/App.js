@@ -6,7 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faEnvelopesBulk, faPhoneSquare } from '@fortawesome/free-solid-svg-icons'
+import { faCoffee, faEnvelopesBulk, faMapLocationDot, faPhoneSquare } from '@fortawesome/free-solid-svg-icons'
 
 import './App.css';
 
@@ -125,6 +125,9 @@ function App() {
          </li>
          <li>
           <FontAwesomeIcon icon={faPhoneSquare} />
+         </li>
+         <li>
+          <FontAwesomeIcon icon={faMapLocationDot} />
          </li>
         </ul>
       </div>
