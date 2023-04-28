@@ -6,7 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelopesBulk, faMapLocationDot, faPhoneSquare } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelopesBulk, faGear, faLeaf, faMapLocationDot, faPenNib, faPhoneSquare } from '@fortawesome/free-solid-svg-icons'
 
 import './App.css';
 
@@ -56,6 +56,7 @@ function App() {
 
   return (
     <div className="App container p-0 position-relative">
+      <div className="pageWrapper">
       <img src={process.env.PUBLIC_URL+"/flower.png"} alt="flower" className="position-absolute  flowerImg"/>
       <div className="App-header   p-0 mt-0 mb-3 overflow-hidden"> 
           <div className="col-12 position-relative">
@@ -72,15 +73,26 @@ function App() {
           </div>
         </div>
 
-
+    <div className="outer">
     <div className="container d-flex flex-column flex-md-row menuOuterWrapper"  ref={header}>
       <div className="col-5 d-flex">
-      <div className="col-6 menuLogoWrapper pt-2">
+      <div className="col-6 menuLogoWrapper">
         <img src={process.env.PUBLIC_URL+"/logo.png"} alt="Synergist" />
       </div>
-      <div className="col-6 fssaiWrapper">
-        <img src={process.env.PUBLIC_URL+"/fssai.png"} alt="fssai" />
+      <div className="col-6 mediaWrapper mt-1">
+        <ul className="d-flex">
+          <li>
+          <FontAwesomeIcon icon={faEnvelopesBulk} />
+         </li>
+         <li>
+          <FontAwesomeIcon icon={faPhoneSquare} />
+         </li>
+         <li>
+          <FontAwesomeIcon icon={faMapLocationDot} />
+         </li>
+        </ul>
       </div>
+     
       
       </div>
       <div className="col-7 d-flex  flex-row-reverse ">
@@ -97,11 +109,8 @@ function App() {
               <NavDropdown.Item href="#action/3.1">Who we are</NavDropdown.Item> 
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
-                Our Mission
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.4">
-                Our Vision
-              </NavDropdown.Item>
+              Biodiesel Overview
+              </NavDropdown.Item> 
             </NavDropdown>
             </div>
             <div className="hoverEffetWrapper position-relative">
@@ -117,24 +126,33 @@ function App() {
     </Navbar>
       </div>
     </div>
-    <div className="d-flex mt-1">
-      <div className="col-3 mediaWrapper">
-        <ul className="d-flex">
-          <li>
-          <FontAwesomeIcon icon={faEnvelopesBulk} />
-         </li>
-         <li>
-          <FontAwesomeIcon icon={faPhoneSquare} />
-         </li>
-         <li>
-          <FontAwesomeIcon icon={faMapLocationDot} />
-         </li>
-        </ul>
-      </div>
-      <p className="col-9 quates">If you are concerned about your environmental footprint and want a more
-         <br/> eco friendly option then we are here with <span>Bio Diesel</span> which is an excellent option for you</p>
     </div>
-     <h3>About Us</h3>
+    <div className="d-flex mt-1">
+    <div className="col-2 gasPump"> 
+      <img src="beaker.png" alt="beaker" />
+      </div>
+      <div className="col-8">
+      <p className="col-12 quates">If you are concerned about your environmental footprint and want a more
+         <br/> eco friendly option then we are here with <span>Bio Diesel</span> which is an excellent option for you
+         
+      </p>
+      </div>
+      <div className="col-2 fssaiWrapper">
+        <img src={process.env.PUBLIC_URL+"/fssai.png"} alt="fssai" />
+      </div>
+    </div>
+    </div>
+
+
+
+
+
+
+     <h3>
+      <FontAwesomeIcon icon={faPenNib} />
+      About Us
+      <FontAwesomeIcon icon={faLeaf}/>
+      </h3>
      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
      <div className="col-12 overflow-hidden videoWrapper">
      <p>Join with us <br/> Let us enhanse the energy security for India by creating <br/>
@@ -152,7 +170,7 @@ function App() {
       </video>
      
      </div>
-     <div>
+     <div className="missionOuter">
       <div className="missionWrapper">
         <div><img src="diesel1.jpg" alt="diesel" />
         <div>
@@ -195,6 +213,49 @@ function App() {
       </div>
      </div>
      
+
+
+
+     <h3>
+      <FontAwesomeIcon icon={faGear}/>
+      Services
+      <FontAwesomeIcon icon={faLeaf}/>
+     </h3>
+<div className="d-flex">
+  <div className="col-3 p-1">
+    <div className="card">
+      <img src="boat.png" alt="boat"/>
+      <hr className="mb-0"/>
+      <p className="p-2 mb-0">We provide quality bio fuel for marine requirments</p>
+    </div>
+  </div>
+  <div className="col-3 p-1">
+    <div className="card">
+      <img src="truck.png" alt="truck"/>
+      <hr className="mb-0"/>
+      <p className="p-2 mb-0">We provide all types of bio diesel blends for heavy vehicles</p>
+    </div>
+  </div>
+  <div className="col-3 p-1">
+  <div className="card">
+      <img src="light-car.png" alt="car"/>
+      <hr className="mb-0"/>
+      <p className="p-2 mb-0">We distribute bio diesel for all types light vehicles with diesel engine</p>
+    </div>
+  </div>
+  <div className="col-3 p-1">
+  <div className="card">
+      <img src="machine.png" alt="machine"/>
+      <hr className="mb-0"/>
+      <p className="p-2 mb-0">We supply bio diesel for heavy machineries and generators</p>
+    </div>
+  </div>
+</div>
+<div className="col-12 serviceBanner position-relative">
+  <img src="serviceBg.jpg" alt="serviceBanner" />
+  <p>Biodiesel can reduce carbon emmissions and <br/>allow people to burn a cleaner form of energy</p>
+</div>
+
       <form ref={form} onSubmit={sendMail}>
           <label>Name</label>
           <input type="text" name="user_name" required />

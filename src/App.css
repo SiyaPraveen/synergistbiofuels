@@ -1,7 +1,20 @@
 .App {
   text-align: center;
 }
-
+h4, h3{
+  color: #66b82c;
+}
+h3{
+  border-bottom: 1px solid;
+  text-align: left;
+  padding: 5px 10px;
+}
+h3 svg{
+  margin-right: 15px;
+}
+h3 svg:nth-child(2){
+  float: right;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -72,7 +85,7 @@
   flex-direction: row-reverse;
 }
 .fssaiWrapper{
-  text-align: right;
+  text-align: left;
 }
 .fssaiWrapper img{
   transition: 1s ease;
@@ -87,19 +100,25 @@ transition: 1s ease;
   text-align: left;
 }
 .menuLogoWrapper img{
-  width: 125px;
+  width: 115px;
+  background: #fff;
+  border: 2px dashed #6fb43d;
+  box-shadow: 0px 15px 10px -15px #111; 
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .navbar-nav .nav-link.active{
   background: #6fb43d;
   color: #fff!important;
-  -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow:0px 1px 5px 0px rgba(0,0,0,0.5);
+-moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+box-shadow:0px 1px 5px 0px rgba(0,0,0,0.5);
 }
 .navbar-nav .nav-link{
   position: relative;
   min-width: 95px;
-  padding: 30px 15px;
+  padding: 18px 15px;
   background:
   conic-gradient(            #fff 0 90deg, #fff0 0) bottom left,
   conic-gradient(            #6fb43d 0 90deg, #fff0 0) bottom left,
@@ -146,27 +165,48 @@ transition: 0.5s;
     z-index: 5; 
     box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.5);
 }
+.pageWrapper{
+  min-height: 100vh;
+  border: 1px solid #999;
+}
+.gasPump{
+  font-size: 65px;
+  color: #6fb43d;
+  text-align: right;
+}
 .mediaWrapper ul{
-  width: 10px;
   list-style: none;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 0px 20px;
 }
 .mediaWrapper ul li{
-  color: #4a7829;
-  padding: 5px;
+  color:  #66b82c;
+  padding: 5px 20px;
   font-size: 1.5em;
   cursor: pointer; 
   transition: all 0.5s;
 }
 .mediaWrapper ul li:hover{
   color: #000;
+} 
+p.quates{
+  margin-top: 25px;
 }
 p.quates span, .videoWrapper p >span{
   color: #f7b60a;
   font-weight: bold;
 }
+.outer{
+  min-height: 60px;
+}
 .menuOuterWrapper{
   border-bottom: 1px solid #6fb43d;
-  background: #fff;
+  background: #f2f9ec;
+  border: 1px solid #6fb43d;
+  height: 60px; 
 }
 .videoWrapper{
   max-height: 500px; 
@@ -190,6 +230,11 @@ video{
   width: 200px;
   border: 1px solid #ccc;
   box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+}
+.missionOuter{
+  border: 1px solid #999;
+  margin-top: 15px;
+  padding: 0px 15px;
 }
 .missionWrapper > div{
   text-align: left;
@@ -331,4 +376,29 @@ video{
 
 .button:hover span:nth-child(4 ) {
   bottom: 50%;
+}
+.card{
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5)
+}
+.card img{
+  width: 100px;
+    margin: 15px auto;
+}
+.card p{
+  background: #6fb43d;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+.serviceBanner img{
+  width: 100%;
+  margin-top: 15px;
+  filter: brightness(0.5);
+}
+.serviceBanner p{
+  position: absolute;
+  top: 35%;
+  color: #fff;
+  font-size: 25px;
+  padding: 0px 20px;
 }
