@@ -5,8 +5,9 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelopesBulk, faGear, faLeaf, faMapLocationDot, faPenNib, faPhoneSquare } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import LazyLoad from 'react-lazy-load';
+import { faEnvelopesBulk, faGear, faHandshakeAngle, faLeaf, faMapLocationDot, faPenNib, faPhoneSquare } from '@fortawesome/free-solid-svg-icons'
 
 import './App.css';
 
@@ -146,8 +147,8 @@ function App() {
 
 
 
-
-
+    <LazyLoad>
+    <div>
      <h3>
       <FontAwesomeIcon icon={faPenNib} />
       About Us
@@ -165,10 +166,11 @@ function App() {
         Contact Us
       </a>
      </p>
+     <LazyLoad offset={100}>
      <video autoplay="autoplay" muted loop id="myVideo">
         <source src="biodeisel.mp4" type="video/mp4" />
       </video>
-     
+     </LazyLoad>
      </div>
      <div className="missionOuter">
       <div className="missionWrapper">
@@ -211,50 +213,79 @@ function App() {
             </div>
           </div> 
       </div>
-     </div>
-     
+     </div> 
+    </div>
+    </LazyLoad>
 
-
-
+     <LazyLoad offset={100}>
+      <div>
      <h3>
       <FontAwesomeIcon icon={faGear}/>
       Services
       <FontAwesomeIcon icon={faLeaf}/>
      </h3>
-<div className="d-flex">
-  <div className="col-3 p-1">
-    <div className="card">
-      <img src="boat.png" alt="boat"/>
-      <hr className="mb-0"/>
-      <p className="p-2 mb-0">We provide quality bio fuel for marine requirments</p>
-    </div>
-  </div>
-  <div className="col-3 p-1">
-    <div className="card">
-      <img src="truck.png" alt="truck"/>
-      <hr className="mb-0"/>
-      <p className="p-2 mb-0">We provide all types of bio diesel blends for heavy vehicles</p>
-    </div>
-  </div>
-  <div className="col-3 p-1">
-  <div className="card">
-      <img src="light-car.png" alt="car"/>
-      <hr className="mb-0"/>
-      <p className="p-2 mb-0">We distribute bio diesel for all types light vehicles with diesel engine</p>
-    </div>
-  </div>
-  <div className="col-3 p-1">
-  <div className="card">
-      <img src="machine.png" alt="machine"/>
-      <hr className="mb-0"/>
-      <p className="p-2 mb-0">We supply bio diesel for heavy machineries and generators</p>
-    </div>
-  </div>
-</div>
-<div className="col-12 serviceBanner position-relative">
-  <img src="serviceBg.jpg" alt="serviceBanner" />
-  <p>Biodiesel can reduce carbon emmissions and <br/>allow people to burn a cleaner form of energy</p>
-</div>
+      <div className="d-flex">
+        <div className="col-3 p-1">
+          <div className="card">
+            <img src="boat.png" alt="boat"/>
+            <hr className="mb-0"/>
+            <p className="p-2 mb-0">We provide quality bio fuel for marine requirments</p>
+          </div>
+        </div>
+        <div className="col-3 p-1">
+          <div className="card">
+            <img src="truck.png" alt="truck"/>
+            <hr className="mb-0"/>
+            <p className="p-2 mb-0">We provide all types of bio diesel blends for heavy vehicles</p>
+          </div>
+        </div>
+        <div className="col-3 p-1">
+        <div className="card">
+            <img src="light-car.png" alt="car"/>
+            <hr className="mb-0"/>
+            <p className="p-2 mb-0">We distribute bio diesel for all types light vehicles with diesel engine</p>
+          </div>
+        </div>
+        <div className="col-3 p-1">
+        <div className="card">
+            <img src="machine.png" alt="machine"/>
+            <hr className="mb-0"/>
+            <p className="p-2 mb-0">We supply bio diesel for heavy machineries and generators</p>
+          </div>
+        </div>
+      </div>
+      <div className="col-12 serviceBanner position-relative">
+        <img src="serviceBg.jpg" alt="serviceBanner" />
+        <p>Biodiesel can reduce carbon emmissions and <br/>allow people to burn a cleaner form of energy</p>
+      </div>
+      </div>
+      </LazyLoad>
+
+
+    <LazyLoad>
+      <div>
+    <h3>
+      <FontAwesomeIcon icon={faHandshakeAngle}/>
+      Career
+      <FontAwesomeIcon icon={faLeaf}/>
+     </h3> 
+     <div className="careerWrapper d-flex overflow-hidden">
+     <div className="col-5">
+<img src="career.jpg" alt="career" />
+     </div>
+     <div className="col-7 position-relative">
+     <p className="quates2"> or whatsapp us on <br/> <span>XXX-XXX-XXXX </span></p>
+      <p className="quates2"><span>praveendas@synergistbiofuels.com </span></p>
+      <p>
+        Currently no open position is available.<br/>
+         If you are interested to work with us,<br/> feel free to send your resume to 
+      </p>
+     </div>
+     </div>
+     </div>
+     </LazyLoad>
+
+
 
       <form ref={form} onSubmit={sendMail}>
           <label>Name</label>
@@ -265,10 +296,7 @@ function App() {
           <textarea name="message" required></textarea>
           <input type="submit" value="send"/>
       </form>
-      <br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/>
-      <br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/><br/>fsfd<br/>
-      
-    </div>
+     </div>
   );
 }
 
